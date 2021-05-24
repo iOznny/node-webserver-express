@@ -16,7 +16,7 @@ app.get('/hola', function (req, res) {
     res.send('Prueba en ruta');
 });
 
-app.get('/', function (req, res) {
+/* app.get('/', function (req, res) {
     res.render('home', {
         name: 'Demo Node',
         title: 'Curso de Node'
@@ -35,10 +35,10 @@ app.get('/elements', function (req, res) {
         name: 'Demo Node',
         title: 'Curso de Node'
     });
-});
+}); */
 
 app.get('*', function (req, res) {
-    res.sendFile(__dirname + '/public/404.html');
+    res.sendFile(__dirname + '/public/index.html');
 });
 
 app.listen(process.env.PORT, () => {
